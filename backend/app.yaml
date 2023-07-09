@@ -1,8 +1,10 @@
 runtime: python39
+entrypoint: gunicorn -b :$PORT main:app
 
 env_variables:
   ENGINE_ID: '02545075c61a24321'
   API_KEY: 'AIzaSyChfaN-id-IAkInxkPoLwx49YfHgF4krsY'
+
 
 handlers:
 - url: /.*
