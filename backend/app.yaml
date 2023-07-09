@@ -1,1 +1,14 @@
-runtime: python37
+runtime: python39
+entrypoint: gunicorn -b :$PORT main:app
+
+env_variables:
+  ENGINE_ID: '02545075c61a24321'
+  API_KEY: 'AIzaSyChfaN-id-IAkInxkPoLwx49YfHgF4krsY'
+
+runtime_config:
+  python_version: 3.9
+
+handlers:
+- url: /.*
+  script: auto
+

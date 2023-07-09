@@ -1,4 +1,5 @@
 import requests
+import os
 from transformers import pipeline
 from flask import Flask, request, jsonify
 
@@ -6,10 +7,11 @@ app = Flask(__name__)
 
 
 #Google Custom Search Engine ID
-engine_id = '02545075c61a24321'
-
+engine_id = os.environ.get('ENGINE_ID')
 #Google API key
-api_key = 'AIzaSyChfaN-id-IAkInxkPoLwx49YfHgF4krsY'
+api_key = os.environ.get('API_KEY')
+
+
 
 # question-answering pipeline initialized
 pipeline_search = pipeline("question-answering", model="distilbert-base-cased-distilled-squad")
