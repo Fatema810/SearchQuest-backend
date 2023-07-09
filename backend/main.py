@@ -16,6 +16,13 @@ api_key = os.environ.get('API_KEY')
 # question-answering pipeline initialized
 pipeline_search = pipeline("question-answering", model="distilbert-base-cased-distilled-squad")
 
+@app.route('/')
+def indicator():
+    return "My Flask Application is running!"
+
+
+
+
 #Path that accepts requests
 @app.route('/searchQuery', methods=['POST'])
 def perform_search():
