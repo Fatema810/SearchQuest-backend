@@ -3,9 +3,11 @@ import os
 # import psutil
 from transformers import pipeline
 from flask import Flask, request, jsonify
+from flask_cors import CORS
 
 app = Flask(__name__)
 # process = psutil.Process()
+CORS(app, origins='https://fatema810.github.io')
 
 
 
