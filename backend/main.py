@@ -10,11 +10,11 @@ app = Flask(__name__)
 
 
 #Google Custom Search Engine ID
-# engine_id = os.environ.get('ENGINE_ID')
-engine_id = '02545075c61a24321'
+engine_id = os.environ.get('ENGINE_ID')
+# engine_id = '02545075c61a24321'
 #Google API key
-# api_key = os.environ.get('API_KEY')
-api_key = 'AIzaSyChfaN-id-IAkInxkPoLwx49YfHgF4krsY'
+api_key = os.environ.get('API_KEY')
+# api_key = 'AIzaSyChfaN-id-IAkInxkPoLwx49YfHgF4krsY'
 
 
 

@@ -7,7 +7,11 @@ env_variables:
   API_KEY: 'AIzaSyChfaN-id-IAkInxkPoLwx49YfHgF4krsY'
 
 
+
 handlers:
 - url: /.*
   script: auto
+  http_headers:
+    Access-Control-Allow-Origin: https://fatema810.github.io
+
 
